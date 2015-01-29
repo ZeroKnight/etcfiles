@@ -1,0 +1,6 @@
+[Unit]
+Description=Prune up to the last 3 cached pacman packages with paccache
+
+[Service]
+ExecStart=/usr/bin/paccache -r
+Type=oneshot

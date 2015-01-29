@@ -1,0 +1,7 @@
+[Unit]
+Description=Script to refresh Pacman's Mirrorlist
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/refreshmirrors
+Type=oneshot

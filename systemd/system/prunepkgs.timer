@@ -1,0 +1,9 @@
+[Unit]
+Description=Prune up to the last 3 cached pacman packages with paccache
+
+[Timer]
+OnCalendar=monthly
+Persistent=true
+
+[Install]
+WantedBy=timers.target
