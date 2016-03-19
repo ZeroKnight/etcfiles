@@ -1,0 +1,17 @@
+[Unit]
+Description=Reconnect Weechat after waking from suspend
+After=suspend.target
+After=hibernate.target
+After=hybrid-sleep.target
+
+[Service]
+Type=oneshot
+User=zeroknight
+
+ExecStart=/usr/bin/sh -c "echo '*/reconnect -all' > $HOME/.weechat/weechat_fifo_`pidof weechat`"
+
+[Install]
+WantedBy=suspend.target
+WantedBy=hibernate.target
+WantedBy=hybrid-sleep.target
+
