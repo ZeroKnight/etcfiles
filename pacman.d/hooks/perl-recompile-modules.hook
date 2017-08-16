@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = perl
+
+[Action]
+Description = Recompiling Perl modules in site_perl ...
+When = PostTransaction
+Exec = /usr/bin/sh -c "cpan -r >/dev/null"
